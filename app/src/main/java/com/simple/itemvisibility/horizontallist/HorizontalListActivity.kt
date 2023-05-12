@@ -9,6 +9,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.PagerSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.github.mminng.itemvisibility.ItemVisibilityHelper
 import com.simple.itemvisibility.R
@@ -48,6 +49,9 @@ class HorizontalListActivity : AppCompatActivity(), SurfaceTextureListener {
         val adapter = HorizontalListAdapter(data)
         val helper = ItemVisibilityHelper()
 
+        val snapHelper = PagerSnapHelper()
+        snapHelper.attachToRecyclerView(binding.hListview)
+
         var renderView: TextureRenderView? = null
         player.setOnPreparedListener {
             player.start()
@@ -60,7 +64,7 @@ class HorizontalListActivity : AppCompatActivity(), SurfaceTextureListener {
         adapter.setOnItemClickListener { item, position ->
             helper.activateItem(position)
         }
-        helper.attachToRecyclerView(binding.hListview, autoActivate = false) {
+        helper.attachToRecyclerView(binding.hListview) {
             activateItem { view, position ->
                 val renderer: TextureRenderView = view.findViewById(R.id.item_h_renderer)
                 val cover: View = view.findViewById(R.id.item_h_cover)
