@@ -4,11 +4,11 @@ Item visibility helper for RecyclerView.
 Help implement video playlist, like Facebook, TikTok etc.  
 Or other features.
 
-[![](https://jitpack.io/v/mminng/item-visibility-helper.svg)](https://jitpack.io/#mminng/item-visibility-helper)
+[![](https://jitpack.io/v/JamesGZM/item-visibility-helper.svg)](https://jitpack.io/#mminng/item-visibility-helper)
 
 # Screenshot
 
-![screenshot](https://github.com/mminng/item-visibility-helper/blob/master/screenshots/simple.gif)
+![screenshot](https://github.com/JamesGZM/item-visibility-helper/blob/master/screenshots/simple.gif)
 
 # Getting Started
 
@@ -28,7 +28,7 @@ allprojects {
 ```Groovy
 dependencies {
     ...
-    implementation 'com.github.mminng:item-visibility-helper:1.0.0'
+    implementation 'com.github.JamesGZM:item-visibility-helper:${lastVersion}'
 }
 ```
 
